@@ -1,0 +1,92 @@
+// Type
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+	font-family: $type;
+	line-height: 1.25;
+	font-size: 16px;
+}
+
+h1,
+h2, .h2,
+h3, .h3 {
+	font-family: $type-display;
+}
+
+h1, .h1 {
+	font-size: 4.8rem;
+	font-weight: 300;
+	@include responsive($sm) {
+		font-size: 3.2rem;
+	}
+}
+
+h2, .h2 {
+	font-size: 3rem;
+	font-weight: 300;
+	@include responsive($sm) {
+		font-size: 1.8rem;
+	}
+}
+
+h3, .h3 {
+	font-size: 2rem;
+	@include responsive($sm) {
+		font-size: 2rem;
+	}
+}
+
+h4, .h4 {
+	font-size: 1.75rem;
+}
+
+h5, .h5 {
+	font-size: 1.4rem;
+}
+
+p {
+	font-family: $type;
+	line-height: 1.4;
+	@include responsive($sm) {
+		font-size: 14px;
+	}
+	&.large {
+		font-size: 1.25em;
+	}
+	&.small {
+		font-size: .9em;
+	}
+}
+
+ul, ol {
+	margin: 10px 0 10px 20px;
+	li {
+		margin: 5px 0;
+	}
+}
+
+ol {
+	li {
+		list-style: decimal;
+	}
+}
+
+a {
+	font-family: $type;
+}
+
+.font-sans {
+	font-family: $type !important;
+}
+
+.formatted-copy {
+	h1,.h1,
+	h2,.h2,
+	h3,.h3,
+	h4,.h4,
+	h5,.h5,
+	p {
+		margin-bottom: 1.75rem;
+	}
+}

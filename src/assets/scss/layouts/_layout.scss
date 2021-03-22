@@ -1,0 +1,29 @@
+// <The Project Name>
+// Main Layout Styling
+// - Author: Myth Digital
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	margin:0;
+	font-weight:400;
+	overflow-x: hidden;
+
+	&._noscroll {
+		overflow: hidden;
+	}
+}
+
+.img-container {
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: inherit;
+		display: block;
+		object-position: center;
+		object-fit: cover;
+	}
+}
