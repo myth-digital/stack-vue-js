@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Loader from '../components/Loader.vue';
-import TransitionPage from '../components/transitions/TransitionPage.vue';
+import Loader from '@/components/Loader.vue';
+import TransitionPage from '@/components/transitions/TransitionPage.vue';
 
 export default {
   components: { Loader, TransitionPage },

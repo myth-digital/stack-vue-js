@@ -1,7 +1,8 @@
-
 import Vuex from 'vuex'
 import Vue from 'vue'
 import createPersistedState from "vuex-persistedstate";
+
+// Uncomment once actions have been established
 // import axios from 'axios';
 
 Vue.use(Vuex)

@@ -1,23 +1,17 @@
-import Vue from 'vue';
-import router from './router';
+import { createApp } from 'vue'
 import App from './App.vue';
+import router from './router'
 import axios from './http';
-import store from './store/index';
+// import store from './store'
 
 // Import plugins
 import VueAxios from 'vue-axios';
-import VueTailwind from 'vue-tailwind';
-import VueMoment from 'vue-moment';
 import '@/assets/css/tailwind.css';
 
-Vue.use(VueTailwind);
-Vue.use(VueAxios, axios);
-Vue.use(VueMoment);
+const app = createApp(App)
 
-Vue.config.productionTip = false;
+app.use(VueAxios, axios);
+app.use(router)
+// app.use(store)
 
-new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app');
+app.mount('#app')

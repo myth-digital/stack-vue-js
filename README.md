@@ -37,6 +37,10 @@ Lints and fixes files
    - [Tailwind CSS 2.0.x](https://tailwindcss.com/)
 - Components
    - [Vue Axios](https://github.com/imcvampire/vue-axios)
-   - [Vue Moment](https://github.com/brockpetrie/vue-moment)
-   - [Vue Tailwind](https://github.com/alfonsobries/vue-tailwind)
    - [Vuex Persisted State](https://github.com/robinvdvleuten/vuex-persistedstate)
+
+
+## To do
+
+- [x] Integrate [Vue Tailwind](https://github.com/alfonsobries/vue-tailwind) when release is available for Vue3
+- [x] Integrate [Vue3 Moment](https://github.com/BrockReece/vu3-moment) when release is available for Vue3

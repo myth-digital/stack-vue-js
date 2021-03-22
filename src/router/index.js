@@ -1,40 +1,30 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import { createWebHistory, createRouter } from "vue-router";
 
-// Modules
-import ExampleRoutes from '../modules/example/router';
+// Build up routes based on module architecture
+import exampleRoutes from '@/modules/example/router'
 
-// Layout
-import Shell from '../layouts/Shell.vue';
+const defaultFallback = {
+  path: '/',
+  redirect: '/login'
+};
 
-Vue.use(Router);
+const baseRoutes = [defaultFallback];
 
-const baseRoutes = [
-  {
-    path: '/',
-    redirect: '/'
-  },
-  {
-    path: '/',
-    name: 'shell',
-    component: Shell,
-    title: 'Project',
-    children: []
-  },
-  {
-    path: '*',
-    redirect: {
-      name: '404'
-    }
-  }
-];
+const routes = baseRoutes.concat(exampleRoutes);
 
-// Register routes
-const routes = baseRoutes.concat( ExampleRoutes );
-
-const router = new Router({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const loggedIn = !!window.localStorage.getItem("token");
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  if (requiresAuth && !loggedIn)
+    next({
+      name: "Login"
+    });
+  next();
 });
 
 export default router;
