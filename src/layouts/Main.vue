@@ -1,5 +1,5 @@
 <template>
-  <main class="shell">
+  <main class="app">
     <loader :isLoading="isLoading"></loader>
     
     <transition-page>

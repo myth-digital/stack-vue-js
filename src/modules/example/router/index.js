@@ -1,11 +1,11 @@
-import Shell from '@/layouts/Shell.vue'
+import Main from '@/layouts/Main.vue'
 import ExampleModule from '../views/ExampleModule.vue'
  
 const routes = [
     {
         path: '/',
         name: 'LayoutModule',
-        component: Shell,
+        component: Main,
         children: [
         {
             path: '/example',

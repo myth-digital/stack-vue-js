@@ -6,7 +6,6 @@ import axios from './http';
 
 // Import plugins
 import VueAxios from 'vue-axios';
-import '@/assets/css/tailwind.css';
 
 const app = createApp(App)
 
