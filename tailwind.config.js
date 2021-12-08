@@ -6,7 +6,6 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
-      './templates/**/*.twig',
       './src/scss/*.scss',
       './src/**/*.vue',
       './src/**/*.jsx',
