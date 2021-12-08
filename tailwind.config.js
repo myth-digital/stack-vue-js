@@ -65,13 +65,13 @@ module.exports = {
         }),
         fontFamily: {
          'sans-primary': [
-            'Oswald'
+            'Lato'
          ],
          'sans-secondary': [
             'Lato'
          ],
          'serif-primary': [
-            'Lato'
+            'Georgia'
          ],
          },
         boxShadow: theme => ({
